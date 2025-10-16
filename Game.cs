@@ -12,25 +12,19 @@ namespace Labb2_ConsolePong
         int width;
         int height;
         Paddle rightPlayer = new Paddle(20, 10, 3);
-        
-
-
         public void StartGame()
         {
             // Setup konsol-fönstret
             width = Console.WindowWidth;
             height = Console.WindowHeight;
             Console.CursorVisible = false;
-            
         }
-
         public bool Run()
         {
             Console.Clear();
             //Töm hela skärmen i början av varje uppdatering.
             
             rightPlayer.Draw();
-
             if (Input.IsPressed(ConsoleKey.UpArrow))
             {
                 rightPlayer.Move(1);
@@ -50,7 +44,6 @@ namespace Labb2_ConsolePong
             {
                 //Flytta spelare 2 nedåt
             }
-
 
 
             //Return true om spelet ska fortsätta
