@@ -11,7 +11,7 @@ namespace Labb2_ConsolePong
     {
         int width;
         int height;
-        Paddle rightPlayer = new Paddle(20, 10, 3);
+        Paddle rightPlayer = new Paddle(115, 10, 3);
         public void StartGame()
         {
             // Setup konsol-fönstret
