@@ -21,9 +21,14 @@ namespace Labb2_ConsolePong
             this.yVelocity = yVelocity;
         }
         public void Move()
-        {
+        {  // fråga hur man får spelet att avslutas rätt när bollen går utanför kanterna.
             x += xVelocity;
             y += yVelocity;
+            if (y <= 0 || y >= Console.WindowHeight - 1)
+            {
+                yVelocity *= -1;
+            }
+
         }
         public void Draw()
         {
