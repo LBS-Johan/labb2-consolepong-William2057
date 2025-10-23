@@ -10,7 +10,7 @@ namespace Labb2_ConsolePong
     {
         public int x;
         public int y;
-        int size;
+        public int size;
 
         public Paddle(int x, int y, int size)
         {
@@ -36,6 +36,7 @@ namespace Labb2_ConsolePong
         {
             Console.SetCursorPosition(x, y);
             Console.Write("|");
+            
         }
     }
 }

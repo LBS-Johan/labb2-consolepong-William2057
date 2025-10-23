@@ -34,7 +34,9 @@ namespace Labb2_ConsolePong
             }
             if (x <= 0 || x >= Console.WindowWidth - 1)
             {
-                Console.WriteLine("Round Over");
+                Console.Clear();
+                Console.WriteLine("Game Over!");
+                Environment.Exit(0);
             }
             Console.SetCursorPosition(x, y);
             Console.Write("o");
