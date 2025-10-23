@@ -57,6 +57,7 @@ namespace Labb2_ConsolePong
                 //Flytta spelare 2 nedåt
                 LeftPlayer.Move(-1);
             }
+
             //Return true om spelet ska fortsätta
             return true;
         }

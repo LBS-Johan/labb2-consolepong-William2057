@@ -35,7 +35,7 @@ namespace Labb2_ConsolePong
             Console.SetCursorPosition(x, y);
             Console.Write("o");
         }
-        void CheckCollisions(Paddle leftPlayer, Paddle rightPlayer, int width, int height)
+        public void CheckCollisions(Paddle leftPlayer, Paddle rightPlayer, int width, int height)
         {
 
         }
