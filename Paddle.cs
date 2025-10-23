@@ -8,8 +8,8 @@ namespace Labb2_ConsolePong
 {
     class Paddle
     {
-        int x;
-        int y;
+        public int x;
+        public int y;
         int size;
 
         public Paddle(int x, int y, int size)
@@ -18,8 +18,17 @@ namespace Labb2_ConsolePong
             this.y = y;
             this.size = size;
         }
-       public void Move(int yAmount)
+       public void Move(int yAmount, int height)
         {
+
+            if (y == 1)
+            {
+                y = (y + 1);
+            }
+            if (y == height -1)
+            {
+                y = (y - 1);
+            }
             int newY = y - yAmount;
             y = newY;
         }
