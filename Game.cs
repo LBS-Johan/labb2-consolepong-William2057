@@ -12,10 +12,8 @@ namespace Labb2_ConsolePong
         int width;
         int height;
         Paddle LeftPlayer = new Paddle(0, 10, 3);
-        Paddle rightPlayer = new Paddle(Console.WindowWidth -1, 10, 3);
-        int middleScreenXValue = Console.WindowWidth / 2;
-        int middleScreenYValue = Console.WindowHeight / 2;
-        Ball gameBall = new Ball(10, 10, 1, 1);
+        Paddle rightPlayer = new Paddle(Console.WindowWidth -2, 10, 3);
+        Ball gameBall = new Ball(Console.WindowWidth/2, Console.WindowHeight/2, 1, 1);
 
         public void StartGame()
         {
@@ -33,6 +31,7 @@ namespace Labb2_ConsolePong
             LeftPlayer.Draw();
             gameBall.Move();
             gameBall.Draw();
+            gameBall.CheckCollisions(LeftPlayer, rightPlayer, width, height);
             
             if (Input.IsPressed(ConsoleKey.UpArrow))
             {

@@ -14,7 +14,7 @@ namespace Labb2_ConsolePong
         int yVelocity;
 
         public Ball(int x, int y, int xVelocity, int yVelocity)
-        {  //Fråga Johan om vilken position bollen ska vara på skärmen
+        {  
             this.x = x;
             this.y = y;
             this.xVelocity = xVelocity;
@@ -34,9 +34,11 @@ namespace Labb2_ConsolePong
             }
             if (x <= 0 || x >= Console.WindowWidth - 1)
             {
-                Console.Clear();
-                Console.WriteLine("Game Over!");
-                Environment.Exit(0);
+                x = Console.WindowWidth / 2;
+                y = Console.WindowHeight / 2;
+                
+                
+                
             }
             Console.SetCursorPosition(x, y);
             Console.Write("o");
@@ -44,15 +46,14 @@ namespace Labb2_ConsolePong
 
         public void CheckCollisions(Paddle leftPlayer, Paddle rightPlayer, int width, int height)
         {
-            if (x == leftPlayer.x && y == leftPlayer.y)
+            if (x == leftPlayer.x +1 && (y == leftPlayer.y || y == leftPlayer.y + 1 || y == leftPlayer.y + 2))
             {
                 xVelocity *= -1;
             }
-            if (x ==rightPlayer.x && y == rightPlayer.y)
+            if (x == rightPlayer.x -1 && (y == rightPlayer.y || y == rightPlayer.y + 1 || y == rightPlayer.y + 2 ))
             {
                 xVelocity *= -1;
             }
-           
         }
 
     }

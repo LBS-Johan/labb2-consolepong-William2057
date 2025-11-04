@@ -35,8 +35,9 @@ namespace Labb2_ConsolePong
             
             for (int i = 0; i < size; i++)
             {
-                //gör paddle spelarna större
-                Console.SetCursorPosition(x, y);
+                
+                Console.SetCursorPosition(x, y + i);
+
                 Console.Write("|");
             }
         }
