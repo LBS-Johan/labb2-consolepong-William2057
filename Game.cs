@@ -14,7 +14,6 @@ namespace Labb2_ConsolePong
         Paddle LeftPlayer = new Paddle(0, Console.WindowHeight/2, 3);
         Paddle rightPlayer = new Paddle(Console.WindowWidth -1, Console.WindowHeight/2, 3);
         Ball gameBall = new Ball(Console.WindowWidth/2, Console.WindowHeight/2, 1, 1);
-
         public void StartGame()
         {
             // Setup konsol-fönstret
@@ -53,7 +52,7 @@ namespace Labb2_ConsolePong
                 //Flytta spelare 2 nedåt
                 LeftPlayer.Move(-1, height);
             }
-
+            
             //Return true om spelet ska fortsätta
             return true;
         }
