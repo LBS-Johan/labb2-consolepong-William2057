@@ -21,7 +21,7 @@ namespace Labb2_ConsolePong
             this.yVelocity = yVelocity;
         }
         public void Move()
-        {  // fråga hur man får spelet att avslutas rätt när bollen går utanför kanterna.
+        {  
             x += xVelocity;
             y += yVelocity;
             
@@ -43,7 +43,7 @@ namespace Labb2_ConsolePong
             Console.SetCursorPosition(x, y);
             Console.Write("o");
         }
-
+        //Kolla om bollen träffar någon av spelarnas x och y-koordinater
         public void CheckCollisions(Paddle leftPlayer, Paddle rightPlayer, int width, int height)
         {
             if (x == leftPlayer.x +1 && (y == leftPlayer.y || y == leftPlayer.y + 1 || y == leftPlayer.y + 2))
