@@ -26,10 +26,12 @@ namespace Labb2_ConsolePong
         }
         public void Draw()
         {
+            //Om bollen träffar tak eller golv ska riktningen vända
             if (y <= 0 || y >= Console.WindowHeight - 1)
             {
                 yVelocity *= -1;
             }
+            //placera bollen i centrum när den har åkt utanför
             if (x <= 0 || x >= Console.WindowWidth - 1)
             {
                 x = Console.WindowWidth / 2;

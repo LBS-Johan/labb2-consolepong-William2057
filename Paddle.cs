@@ -19,6 +19,7 @@ namespace Labb2_ConsolePong
         }
        public void Move(int yAmount, int height)
         {
+            //Ser till att spelarna inte kan gå utanför spel-fönstret
             int newY = y - yAmount;
             if (newY < 0)
                 newY = 0;
@@ -28,6 +29,7 @@ namespace Labb2_ConsolePong
         }
         public void Draw()
         {
+            //Rita ut karaktärerna 
             for (int i = 0; i < size; i++)
             {
                 Console.SetCursorPosition(x, y + i);

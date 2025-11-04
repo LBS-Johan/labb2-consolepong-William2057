@@ -31,8 +31,10 @@ namespace Labb2_ConsolePong
             rightPlayer.Draw();
             LeftPlayer.Draw();
             gameBall.Move();
+            //Öka spelarens poäng om bollen åker ut på motsatta sidan
             if (gameBall.x <= 0)
             {
+                
                 rightPlayerScore++;
             }
             if (gameBall.x >= Console.WindowWidth - 1)
@@ -67,6 +69,7 @@ namespace Labb2_ConsolePong
         }
         void drawScore()
         {
+            //Skriv ut spelarnas poäng i konsolen.
             Console.SetCursorPosition(1, 1);
             Console.Write("Left Player: " + leftPlayerScore + " Points Right Player: " + rightPlayerScore + " Points");
         }
