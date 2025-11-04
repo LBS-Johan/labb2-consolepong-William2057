@@ -25,7 +25,6 @@ namespace Labb2_ConsolePong
         }
         public bool Run()
         {
-            
             Console.Clear();
             //Töm hela skärmen i början av varje uppdatering.
             drawScore();
@@ -42,7 +41,6 @@ namespace Labb2_ConsolePong
             }
             gameBall.Draw();
             gameBall.CheckCollisions(LeftPlayer, rightPlayer, width, height);
-            
             
             if (Input.IsPressed(ConsoleKey.UpArrow))
             {
@@ -64,7 +62,6 @@ namespace Labb2_ConsolePong
                 //Flytta spelare 2 nedåt
                 LeftPlayer.Move(-1, height);
             }
-            
             //Return true om spelet ska fortsätta
             return true;
         }

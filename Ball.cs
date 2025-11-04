@@ -23,7 +23,6 @@ namespace Labb2_ConsolePong
         {  
             x += xVelocity;
             y += yVelocity;
-            
         }
         public void Draw()
         {
