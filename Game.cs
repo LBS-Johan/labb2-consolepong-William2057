@@ -11,8 +11,8 @@ namespace Labb2_ConsolePong
     {
         int width;
         int height;
-        Paddle LeftPlayer = new Paddle(0, 10, 3);
-        Paddle rightPlayer = new Paddle(Console.WindowWidth -2, 10, 3);
+        Paddle LeftPlayer = new Paddle(0, Console.WindowHeight/2, 3);
+        Paddle rightPlayer = new Paddle(Console.WindowWidth -1, Console.WindowHeight/2, 3);
         Ball gameBall = new Ball(Console.WindowWidth/2, Console.WindowHeight/2, 1, 1);
 
         public void StartGame()
