@@ -11,6 +11,8 @@ namespace Labb2_ConsolePong
     {
         int width;
         int height;
+        int leftPlayerScore = 0;
+        int rightPlayerScore = 0;
         Paddle LeftPlayer = new Paddle(0, Console.WindowHeight/2, 3);
         Paddle rightPlayer = new Paddle(Console.WindowWidth -1, Console.WindowHeight/2, 3);
         Ball gameBall = new Ball(Console.WindowWidth/2, Console.WindowHeight/2, 1, 1);
@@ -23,14 +25,24 @@ namespace Labb2_ConsolePong
         }
         public bool Run()
         {
+            
             Console.Clear();
             //Töm hela skärmen i början av varje uppdatering.
-            
+            drawScore();
             rightPlayer.Draw();
             LeftPlayer.Draw();
             gameBall.Move();
+            if (gameBall.x <= 0)
+            {
+                rightPlayerScore++;
+            }
+            if (gameBall.x >= Console.WindowWidth - 1)
+            {
+                leftPlayerScore++;
+            }
             gameBall.Draw();
             gameBall.CheckCollisions(LeftPlayer, rightPlayer, width, height);
+            
             
             if (Input.IsPressed(ConsoleKey.UpArrow))
             {
@@ -55,6 +67,11 @@ namespace Labb2_ConsolePong
             
             //Return true om spelet ska fortsätta
             return true;
+        }
+        void drawScore()
+        {
+            Console.SetCursorPosition(1, 1);
+            Console.Write("Left Player: " + leftPlayerScore + " Points Right Player: " + rightPlayerScore + " Points");
         }
     }
 }

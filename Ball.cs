@@ -8,11 +8,10 @@ namespace Labb2_ConsolePong
 {
     class Ball
     {
-        int x;
+        public int x;
         int y;
         int xVelocity;
         int yVelocity;
-
         public Ball(int x, int y, int xVelocity, int yVelocity)
         {  
             this.x = x;
@@ -36,9 +35,6 @@ namespace Labb2_ConsolePong
             {
                 x = Console.WindowWidth / 2;
                 y = Console.WindowHeight / 2;
-                
-                
-                
             }
             Console.SetCursorPosition(x, y);
             Console.Write("o");
@@ -54,7 +50,6 @@ namespace Labb2_ConsolePong
             {
                 xVelocity *= -1;
             }
-        }
-
+        } 
     }
 }
