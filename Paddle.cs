@@ -19,24 +19,18 @@ namespace Labb2_ConsolePong
         }
        public void Move(int yAmount, int height)
         {
-            if (y == 1)
-            {
-                y = (y + 1);
-            }
-            if (y == height -1)
-            {
-                y = (y - 1);
-            }
             int newY = y - yAmount;
+            if (newY < 0)
+                newY = 0;
+            if (newY + size > height)
+                newY = height - size;
             y = newY;
         }
         public void Draw()
         {
             for (int i = 0; i < size; i++)
             {
-                
                 Console.SetCursorPosition(x, y + i);
-
                 Console.Write("|");
             }
         }
